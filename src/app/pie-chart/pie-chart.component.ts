@@ -22,8 +22,22 @@ import { ChartModule } from 'primeng/chart';
           datasets: [
               {
                   data: [540, 325, 702],
-                  backgroundColor: [documentStyle.getPropertyValue('--blue-500'), documentStyle.getPropertyValue('--yellow-500'), documentStyle.getPropertyValue('--green-500')],
-                  hoverBackgroundColor: [documentStyle.getPropertyValue('--blue-400'), documentStyle.getPropertyValue('--yellow-400'), documentStyle.getPropertyValue('--green-400')]
+                    backgroundColor: [
+                  //   documentStyle.getPropertyValue('--blue-500'),
+                  //   documentStyle.getPropertyValue('--yellow-500'),
+                  //   documentStyle.getPropertyValue('--green-500')
+                  "#42A5F5",
+                  "#66BB6A",
+                  "#FFA726"
+                  ],
+                  hoverBackgroundColor: [
+                    // documentStyle.getPropertyValue('--blue-400'),
+                    // documentStyle.getPropertyValue('--yellow-400'),
+                    // documentStyle.getPropertyValue('--green-400')
+                    "#64B5F6",
+                    "#81C784",
+                    "#FFB74D"
+                  ]
               }
           ]
         };
