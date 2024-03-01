@@ -1,0 +1,28 @@
+.main-dashboard { 
+    flex-direction: row;
+    justify-content:start;
+    max-height: 50%;
+    
+    .charts-area {
+        max-width: 80%;
+        display: flex;
+        flex-direction: column;
+        max-height: 30%;
+        flex-wrap:wrap;
+        border: 1px solid red;
+        overflow-y: auto;
+        position: relative;
+        padding: 2rem;
+        .bars-pie {
+            padding-top: 2rem;
+            display: flex;
+            flex-direction: row;
+        }
+    }
+
+    .controls-area {
+        width: auto;
+        border: 1px solid green;
+        background-color: red;
+    }
+}
