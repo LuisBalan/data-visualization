@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ChartModule } from 'primeng/chart';
+import { LineChartData } from '../../line-chart-data';
 
 
 @Component({
@@ -10,9 +11,10 @@ import { ChartModule } from 'primeng/chart';
   styleUrl: './line-chart.component.scss'
 })
 export class LineChartComponent implements OnInit {
-  data: any;
 
-  options: any;
+    @Input() dataForLineChart!: LineChartData;
+    public data!: LineChartData;
+    options: any;
 
   ngOnInit() {
       const documentStyle = getComputedStyle(document.documentElement);
@@ -20,25 +22,27 @@ export class LineChartComponent implements OnInit {
       const textColorSecondary = documentStyle.getPropertyValue('--text-color-secondary');
       const surfaceBorder = documentStyle.getPropertyValue('--surface-border');
 
-      this.data = {
-          labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-          datasets: [
-              {
-                  label: 'First Dataset',
-                  data: [65, 59, 80, 81, 56, 55, 40],
-                  fill: false,
-                  borderColor: documentStyle.getPropertyValue('--blue-500'),
-                  tension: 0.4
-              },
-              {
-                  label: 'Second Dataset',
-                  data: [28, 48, 40, 19, 86, 27, 90],
-                  fill: false,
-                  borderColor: documentStyle.getPropertyValue('--pink-500'),
-                  tension: 0.4
-              }
-          ]
-      };
+    //   this.data = {
+    //       labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+    //       datasets: [
+    //           {
+    //               label: 'First Dataset',
+    //               data: [65, 59, 80, 81, 56, 55, 40],
+    //               fill: false,
+    //               borderColor: documentStyle.getPropertyValue('--blue-500'),
+    //               tension: 0.4
+    //           },
+    //           {
+    //               label: 'Second Dataset',
+    //               data: [28, 48, 40, 19, 86, 27, 90],
+    //               fill: false,
+    //               borderColor: documentStyle.getPropertyValue('--pink-500'),
+    //               tension: 0.4
+    //           }
+    //       ]
+    //   };
+
+    this.data = this.dataForLineChart;
 
       this.options = {
           maintainAspectRatio: false,
