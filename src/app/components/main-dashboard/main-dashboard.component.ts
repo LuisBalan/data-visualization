@@ -5,6 +5,7 @@ import { BasicChartComponent } from '../basic-chart/basic-chart.component';
 import { DoughnutChartComponent } from '../doughnut-chart/doughnut-chart.component';
 import { DividerModule } from 'primeng/divider';
 import { CardModule } from 'primeng/card';
+import { SingleData } from '../../interfaces';
 
 
 
@@ -25,6 +26,7 @@ import { CardModule } from 'primeng/card';
 export class MainDashboardComponent {
 
   data: any
+  dataForPieChart!: SingleData;
 
   ngOnInit() { 
     const documentStyle = getComputedStyle(document.documentElement);
@@ -55,6 +57,12 @@ export class MainDashboardComponent {
         }
       ]
   };
+
+    this.dataForPieChart = {
+      'A': 540,
+      'B': 325,
+      'C': 702
+    };
 }
 
 

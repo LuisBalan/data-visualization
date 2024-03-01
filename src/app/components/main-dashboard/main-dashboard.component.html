@@ -6,7 +6,10 @@
         <div class="bars-pie">
                 <app-basic-chart></app-basic-chart>
                 <app-doughnut-chart></app-doughnut-chart>
-                <app-pie-chart></app-pie-chart>
+                <app-pie-chart
+                    [dataToRender]="dataForPieChart"
+                >
+                </app-pie-chart>
         </div>
     </div>
     <div class="controls-area">
