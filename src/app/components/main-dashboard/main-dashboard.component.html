@@ -1,6 +1,8 @@
 <div class="main-dashboard" style="border: 1px solid blue;">
     <div class="charts-area">
-        <app-line-chart></app-line-chart>
+        <app-line-chart
+            [dataForLineChart]="data"
+        ></app-line-chart>
         <div class="bars-pie">
                 <app-basic-chart></app-basic-chart>
                 <app-doughnut-chart></app-doughnut-chart>
