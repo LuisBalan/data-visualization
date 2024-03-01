@@ -3,6 +3,9 @@ import { LineChartComponent } from '../line-chart/line-chart.component';
 import { PieChartComponent } from '../pie-chart/pie-chart.component';
 import { BasicChartComponent } from '../basic-chart/basic-chart.component';
 import { DoughnutChartComponent } from '../doughnut-chart/doughnut-chart.component';
+import { DividerModule } from 'primeng/divider';
+import { CardModule } from 'primeng/card';
+
 
 
 @Component({
@@ -12,7 +15,9 @@ import { DoughnutChartComponent } from '../doughnut-chart/doughnut-chart.compone
     LineChartComponent,
     PieChartComponent,
     BasicChartComponent,
-    DoughnutChartComponent
+    DoughnutChartComponent,
+    DividerModule,
+    CardModule
   ],
   templateUrl: './main-dashboard.component.html',
   styleUrl: './main-dashboard.component.scss'
