@@ -5,7 +5,7 @@ import { BasicChartComponent } from '../basic-chart/basic-chart.component';
 import { DoughnutChartComponent } from '../doughnut-chart/doughnut-chart.component';
 import { DividerModule } from 'primeng/divider';
 import { CardModule } from 'primeng/card';
-import { SingleData } from '../../interfaces';
+import { LineChartData, SingleData } from '../../interfaces';
 
 
 
@@ -25,13 +25,13 @@ import { SingleData } from '../../interfaces';
 })
 export class MainDashboardComponent {
 
-  data: any
+  dataForBasicChart!: LineChartData;
   dataForPieChart!: SingleData;
 
   ngOnInit() { 
     const documentStyle = getComputedStyle(document.documentElement);
 
-    this.data = {
+    this.dataForBasicChart = {
       labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
       datasets: [
           {
