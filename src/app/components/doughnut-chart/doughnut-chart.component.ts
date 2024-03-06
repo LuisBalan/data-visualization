@@ -17,10 +17,10 @@ export class DoughnutChartComponent implements OnInit {
     const textColor = documentStyle.getPropertyValue('--text-color');
 
     this.data = {
-      labels: ['A', 'B', 'C'],
+      labels: ['Estacionamiento', 'Inmuebles', 'Marketing'],
       datasets: [
           {
-              data: [300, 50, 100],
+              data: [30, 50, 20],
               backgroundColor: [
                 // documentStyle.getPropertyValue('--blue-500'),
                 // documentStyle.getPropertyValue('--yellow-500'),

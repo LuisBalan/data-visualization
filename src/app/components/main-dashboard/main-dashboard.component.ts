@@ -32,36 +32,44 @@ export class MainDashboardComponent {
     const documentStyle = getComputedStyle(document.documentElement);
 
     this.dataForBasicChart = {
-      labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+      labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August'],
       datasets: [
           {
-              label: 'First Dataset',
-              data: [65, 59, 80, 81, 56, 55, 40],
+              label: 'Radio',
+              data: [65, 59, 80, 81, 56, 55, 40, 53],
               fill: false,
               borderColor: documentStyle.getPropertyValue('--blue-500'),
-              tension: 0.4
+              tension: 0.05
           },
           {
-              label: 'Second Dataset',
-              data: [28, 48, 40, 19, 86, 27, 90],
+              label: 'Estacionamiento',
+              data: [28, 48, 40, 19, 86, 27, 90, 18],
               fill: false,
               borderColor: documentStyle.getPropertyValue('--pink-500'),
-              tension: 0.4
+              tension: 0.05
           },
           {
-            label: 'Third Dataset',
-            data: [33, 53, 45, 24, 91, 32, 95],
+            label: 'Inmuebles',
+            data: [33, 53, 45, 24, 91, 32, 95, 23],
             fill: false,
             borderColor: documentStyle.getPropertyValue('--red-500'),
-            tension: 0.4
-        }
+            tension: 0.05
+        },
+        {
+          label: 'Publicidad',
+          data: [35, 55, 47, 45, 93, 97, 95, 25],
+          fill: false,
+          borderColor: documentStyle.getPropertyValue('--blue-500'),
+          tension: 0.05
+      }
       ]
   };
 
     this.dataForPieChart = {
-      'A': 540,
-      'B': 325,
-      'C': 702
+      'Ventas': 40,
+      'Renta': 32,
+      'Estacionamiento': 7,
+      'Radio': 21
     };
 }
 

@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ChartModule } from 'primeng/chart';
 import { PieChartData, SingleData } from '../../interfaces';
-
+import autocolors from 'chartjs-plugin-autocolors';
 
 @Component({
   selector: 'app-pie-chart',
@@ -11,10 +11,13 @@ import { PieChartData, SingleData } from '../../interfaces';
   styleUrl: './pie-chart.component.scss'
 })
   export class PieChartComponent implements OnInit {
-
-      @Input() dataToRender!: SingleData;
-      data: PieChartData = {
+    
+    
+    @Input() dataToRender!: SingleData;
+    responsive!: boolean;
+    data: PieChartData = {
         labels: [],
+        pluggins: [autocolors],
         datasets: [
             {
                 data: [],
@@ -39,7 +42,7 @@ import { PieChartData, SingleData } from '../../interfaces';
         const textColor = documentStyle.getPropertyValue('--text-color');
 
         this.assignValuesToPieChart();
-
+      this.responsive = false;
         this.options = {
           plugins: {
               legend: {
