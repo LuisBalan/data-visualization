@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, isDevMode } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { MainDashboardComponent } from './components/main-dashboard/main-dashboard.component';
  
@@ -11,4 +11,11 @@ import { MainDashboardComponent } from './components/main-dashboard/main-dashboa
 })
 export class AppComponent {
   title = 'data-visualization';
+  ngOnInit() {
+    if (isDevMode()) {
+      console.log('Development!');
+      } else {
+        console.log('Production!');
+        }
+  }
 }

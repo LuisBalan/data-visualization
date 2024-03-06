@@ -24,3 +24,10 @@ export interface PieDataSet {
 }
 
 export interface SingleData {[label: string]: number}
+
+export interface CountryData {
+    "id": number,
+    "Year": string,
+    "Population": string,
+    "Growth Rate": string
+}

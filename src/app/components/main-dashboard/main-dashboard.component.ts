@@ -6,6 +6,8 @@ import { DoughnutChartComponent } from '../doughnut-chart/doughnut-chart.compone
 import { DividerModule } from 'primeng/divider';
 import { CardModule } from 'primeng/card';
 import { LineChartData, SingleData } from '../../interfaces';
+import { DataService } from '../../services/data.service';
+import { Data } from '@angular/router';
 
 
 
@@ -25,11 +27,18 @@ import { LineChartData, SingleData } from '../../interfaces';
 })
 export class MainDashboardComponent {
 
+  constructor(private _dataService: DataService) {}
+
   dataForBasicChart!: LineChartData;
   dataForPieChart!: SingleData;
 
+  renderData() {
+    this._dataService.getWorldPopulationByDecade('10').subscribe(data => console.log(data))
+  };
+
   ngOnInit() { 
     const documentStyle = getComputedStyle(document.documentElement);
+    console.log('data service: ', this.renderData())
 
     this.dataForBasicChart = {
       labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August'],
