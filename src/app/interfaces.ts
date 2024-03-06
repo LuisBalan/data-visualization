@@ -14,6 +14,7 @@ export interface LineDataSet {
 export interface PieChartData {
     labels: string[];
     datasets: PieDataSet[];
+    pluggins: any[];
 }
 
 export interface PieDataSet {
