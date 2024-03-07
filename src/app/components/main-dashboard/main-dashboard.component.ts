@@ -7,9 +7,6 @@ import { DividerModule } from 'primeng/divider';
 import { CardModule } from 'primeng/card';
 import { LineChartData, SingleData } from '../../interfaces';
 import { DataService } from '../../services/data.service';
-import { Data } from '@angular/router';
-
-
 
 @Component({
   selector: 'app-main-dashboard',
@@ -26,19 +23,20 @@ import { Data } from '@angular/router';
   styleUrl: './main-dashboard.component.scss'
 })
 export class MainDashboardComponent {
-
-  constructor(private _dataService: DataService) {}
-
+  
+  private dataFromServer!: any;
+  private basicChartLabels!: any;
   dataForBasicChart!: LineChartData;
   dataForPieChart!: SingleData;
 
-  renderData() {
-    this._dataService.getWorldPopulationByDecade('10').subscribe(data => console.log(data))
-  };
-
+  constructor(private _dataService: DataService) {}
+  
+  
   ngOnInit() { 
     const documentStyle = getComputedStyle(document.documentElement);
-    console.log('data service: ', this.renderData())
+    
+    this.dataFromServer = this.renderData();
+    // this.basicChartLabels = this.dataFromServer.map((decade: any) => decade.Year);
 
     this.dataForBasicChart = {
       labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August'],
@@ -80,7 +78,19 @@ export class MainDashboardComponent {
       'Estacionamiento': 7,
       'Radio': 21
     };
+
+    
+  }
+  
+  generateDataForBasicChart() {
+    const labels = this.dataFromServer.map((decade: any) => decade.Year)
+    console.log('labels: ', labels)
+    return labels
+  }
+
+  renderData() {
+    this._dataService.getWorldPopulationByDecade('10').subscribe(data => console.log('data from on init: ', data))
+  };
+
 }
 
-
-}
