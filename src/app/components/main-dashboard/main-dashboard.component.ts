@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { LineChartComponent } from '../line-chart/line-chart.component';
 import { PieChartComponent } from '../pie-chart/pie-chart.component';
-import { BasicChartComponent } from '../basic-chart/basic-chart.component';
+import { SingleBarChartComponent } from '../basic-chart/single-bar-chart.component';
 import { DoughnutChartComponent } from '../doughnut-chart/doughnut-chart.component';
 import { DividerModule } from 'primeng/divider';
 import { CardModule } from 'primeng/card';
@@ -14,7 +14,7 @@ import { DataService } from '../../services/data.service';
   imports: [
     LineChartComponent,
     PieChartComponent,
-    BasicChartComponent,
+    SingleBarChartComponent,
     DoughnutChartComponent,
     DividerModule,
     CardModule

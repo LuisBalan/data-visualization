@@ -2,13 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { ChartModule } from 'primeng/chart';
 
 @Component({
-  selector: 'app-basic-chart',
+  selector: 'single-bar-chart',
   standalone: true,
   imports: [ ChartModule ],
-  templateUrl: './basic-chart.component.html',
-  styleUrl: './basic-chart.component.scss'
+  templateUrl: './single-bar-chart.component.html',
+  styleUrl: './single-bar-chart.component.scss'
 })
-export class BasicChartComponent implements OnInit {
+export class SingleBarChartComponent implements OnInit {
   basicData: any;
   basicOptions: any;
 
