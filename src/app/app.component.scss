@@ -14,6 +14,7 @@ body {
     display: flex;
     flex-direction: row;
     height: auto;
+    padding-top: 0.5rem;
     .dashboard {
         width: 80vw;
         padding-right: 0.5rem;
@@ -22,6 +23,5 @@ body {
         width: 20vw;
         display: inline-block;
         height: 100%;
-        background-color: gray;
     }
 }
