@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BasicChartComponent } from './basic-chart.component';
+import { SingleBarChartComponent } from './single-bar-chart.component';
 
 describe('BasicChartComponent', () => {
-  let component: BasicChartComponent;
-  let fixture: ComponentFixture<BasicChartComponent>;
+  let component: SingleBarChartComponent;
+  let fixture: ComponentFixture<SingleBarChartComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [BasicChartComponent]
+      imports: [SingleBarChartComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(BasicChartComponent);
+    fixture = TestBed.createComponent(SingleBarChartComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

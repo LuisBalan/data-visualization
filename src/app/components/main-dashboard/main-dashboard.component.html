@@ -1,18 +1,16 @@
 <div class="main-dashboard" style="border: 1px solid blue;">
     <div class="charts-area">
+        <div class="bars-pie">
+            <app-doughnut-chart></app-doughnut-chart>
+            <app-pie-chart
+            [dataToRender]="dataForPieChart"
+            >
+        </app-pie-chart>
+        <single-bar-chart></single-bar-chart>
         <app-line-chart
             [dataForLineChart]="dataForBasicChart"
         ></app-line-chart>
-        <div class="bars-pie">
-                <app-basic-chart></app-basic-chart>
-                <app-doughnut-chart></app-doughnut-chart>
-                <app-pie-chart
-                    [dataToRender]="dataForPieChart"
-                >
-                </app-pie-chart>
+        <app-combo-chart></app-combo-chart>
         </div>
-    </div>
-    <div class="controls-area">
-
     </div>
 </div>
