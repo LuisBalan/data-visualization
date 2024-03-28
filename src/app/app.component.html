@@ -1,15 +1,17 @@
 <main class="main">
-  <p-toolbar
-    styleClass="navbar-style"
-  >
-    <h1>DataMetrika</h1>
+  <p-toolbar>
+    <h3>DataMetrika</h3>
   </p-toolbar>
   <div class="visual">
     <div class="dashboard">
-      <app-main-dashboard></app-main-dashboard>
+      <p-card>
+        <app-main-dashboard></app-main-dashboard>
+      </p-card>
     </div>
     <div class="toolbar">
-      toolbar content
+      <p-card header="Controls">
+        Controls Area
+      </p-card>
     </div>
   </div>
 </main>
