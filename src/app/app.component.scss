@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+.navbar-style {
+    background-color: aqua;
+    border: 1px solid aqua;
+}
+
+
+.visual {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    .dashboard {
+        width: 80vw;
+        padding-right: 0.5rem;
+    }
+    .toolbar {
+        width: 20vw;
+        display: inline-block;
+        height: 100%;
+        background-color: gray;
+    }
+}
