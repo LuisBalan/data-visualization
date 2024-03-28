@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ChartModule } from 'primeng/chart';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'single-bar-chart',
@@ -11,6 +12,8 @@ import { ChartModule } from 'primeng/chart';
 export class SingleBarChartComponent implements OnInit {
   basicData: any;
   basicOptions: any;
+
+  constructor( private dataService: DataService) {}
 
   ngOnInit() {
     const documentStyle = getComputedStyle(document.documentElement);
