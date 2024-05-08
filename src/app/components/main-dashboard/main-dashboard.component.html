@@ -1,16 +1,28 @@
-<div class="main-dashboard" style="border: 1px solid blue;">
+<div class="main-dashboard" style="border: 1px solid gray;">
     <div class="charts-area">
         <div class="bars-pie">
             <app-doughnut-chart></app-doughnut-chart>
             <app-pie-chart
             [dataToRender]="dataForPieChart"
             >
-        </app-pie-chart>
+            </app-pie-chart>
         <single-bar-chart></single-bar-chart>
         <app-line-chart
             [dataForLineChart]="dataForBasicChart"
         ></app-line-chart>
         <app-combo-chart></app-combo-chart>
-        </div>
+     </div>
     </div>
 </div>
+<div class="grid charts-container">
+        <div class="col-6">
+            <p-card>ITEM 1</p-card>
+        </div>
+        <div class="col-4">
+            <p-card>ITEM 2</p-card>
+        </div>
+        <div class="col-4">
+            <p-card>ITEM 3</p-card>
+        </div>
+</div>
+
