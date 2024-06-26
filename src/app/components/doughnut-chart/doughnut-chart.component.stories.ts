@@ -1,5 +1,5 @@
 import { DoughnutChartComponent } from "./doughnut-chart.component";
-import { componentWrapperDecorator, moduleMetadata, type Meta, type StoryObj } from "@storybook/angular/"
+import { componentWrapperDecorator, type Meta, type StoryObj } from "@storybook/angular/"
 
 type Story = StoryObj<DoughnutChartComponent>;
 

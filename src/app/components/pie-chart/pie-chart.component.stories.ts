@@ -1,0 +1,35 @@
+import { PieChartComponent } from "./pie-chart.component";
+import { componentWrapperDecorator, type Meta, type StoryObj } from "@storybook/angular";
+
+export const Primary: StoryObj<PieChartComponent> = {
+    args: {
+        data: {
+            labels: [],
+            pluggins: [],
+            datasets: [
+                {
+                    data: [],
+                      backgroundColor: [
+                    "#42A5F5",
+                    "#66BB6A",
+                    "#FFA726"
+                    ],
+                    hoverBackgroundColor: [
+                      "#64B5F6",
+                      "#81C784",
+                      "#FFB74D"
+                    ]
+                }
+            ]
+          }
+    }
+};
+
+const meta: Meta<PieChartComponent> = {
+    component: PieChartComponent,
+    decorators: [
+        componentWrapperDecorator((story) => `<div style="width: 40%; height: 40%">${story}</div>`),
+    ],
+};
+
+export default meta;
