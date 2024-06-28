@@ -1,8 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ChartModule } from 'primeng/chart';
 import { LineChartData } from '../../interfaces';
-import { plugins } from 'chart.js';
-
 
 @Component({
   selector: 'app-line-chart',
@@ -13,8 +11,8 @@ import { plugins } from 'chart.js';
 })
 export class LineChartComponent implements OnInit {
 
-    @Input() dataForLineChart!: LineChartData;
-    public data!: LineChartData;
+    @Input() dataForLineChart!: any;
+    public data!: any;
     options: any;
 
   ngOnInit() {

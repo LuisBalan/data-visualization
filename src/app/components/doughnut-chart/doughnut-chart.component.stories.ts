@@ -12,22 +12,22 @@ export const Primary: Story = {
             datasets: [
                 {
                     data: [15, 30, 20, 10, 25],
-                    backgroundColor: [
-                      // documentStyle.getPropertyValue('--blue-500'),
-                      // documentStyle.getPropertyValue('--yellow-500'),
-                      // documentStyle.getPropertyValue('--green-500')
-                      "#FF6384",
-                      "#36A2EB",
-                      "#FFCE56"
-                    ],
-                    hoverBackgroundColor: [
-                      // documentStyle.getPropertyValue('--blue-400'),
-                      // documentStyle.getPropertyValue('--yellow-400'),
-                      // documentStyle.getPropertyValue('--green-400')
-                      "#FF6384",
-                      "#36A2EB",
-                      "#FFCE56"
-                    ]
+                    // backgroundColor: [
+                    //   // documentStyle.getPropertyValue('--blue-500'),
+                    //   // documentStyle.getPropertyValue('--yellow-500'),
+                    //   // documentStyle.getPropertyValue('--green-500')
+                    //   "#FF6384",
+                    //   "#36A2EB",
+                    //   "#FFCE56"
+                    // ],
+                    // hoverBackgroundColor: [
+                    //   // documentStyle.getPropertyValue('--blue-400'),
+                    //   // documentStyle.getPropertyValue('--yellow-400'),
+                    //   // documentStyle.getPropertyValue('--green-400')
+                    //   "#FF6384",
+                    //   "#36A2EB",
+                    //   "#FFCE56"
+                    // ]
                 }
             ],
             options: {
@@ -45,7 +45,7 @@ export const Primary: Story = {
 const meta: Meta<DoughnutChartComponent> = {
     component: DoughnutChartComponent,
     decorators: [
-        componentWrapperDecorator((story) => `<div>${story}</div>`),
+        componentWrapperDecorator((story) => `<div style="height: 50%; width: 50%">${story}</div>`),
     ],
 };
 export default meta;

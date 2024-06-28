@@ -47,7 +47,7 @@ export class DoughnutChartComponent implements OnInit {
       options: {
         plugins: {
           colorschemes: {
-            scheme: 'Aspect6'
+            scheme: 'brewer.SetOne8'
           }
         }
       }
