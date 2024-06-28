@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ChartModule } from 'primeng/chart';
 import { LineChartData } from '../../interfaces';
+import { plugins } from 'chart.js';
 
 
 @Component({
@@ -33,7 +34,10 @@ export class LineChartComponent implements OnInit {
                   labels: {
                       color: textColor
                   }
-              }
+              },
+                colorschemes: {
+                  scheme: 'brewer.Paired12'
+                }
           },
           scales: {
               x: {

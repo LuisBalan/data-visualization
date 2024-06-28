@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ChartModule } from 'primeng/chart';
 import { DataService } from '../../services/data.service';
+import { plugins } from 'chart.js';
 
 @Component({
   selector: 'single-bar-chart',
@@ -31,9 +32,9 @@ export class SingleBarChartComponent implements OnInit {
             {
                 label: 'Ventas',
                 data: [540, 325, 702, 620],
-                backgroundColor: ['rgba(255, 159, 64, 0.2)', 'rgba(75, 192, 192, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(153, 102, 255, 0.2)'],
-                borderColor: ['rgb(255, 159, 64)', 'rgb(75, 192, 192)', 'rgb(54, 162, 235)', 'rgb(153, 102, 255)'],
-                borderWidth: 1
+                // backgroundColor: ['rgba(255, 159, 64, 0.2)', 'rgba(75, 192, 192, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(153, 102, 255, 0.2)'],
+                // borderColor: ['rgb(255, 159, 64)', 'rgb(75, 192, 192)', 'rgb(54, 162, 235)', 'rgb(153, 102, 255)'],
+                // borderWidth: 1
             }
         ]
     };
@@ -44,7 +45,10 @@ export class SingleBarChartComponent implements OnInit {
                 labels: {
                     color: textColor
                 }
-            }
+            },
+            colorschemes: {
+                scheme: 'office.Blue6'
+              }
         },
         scales: {
             y: {

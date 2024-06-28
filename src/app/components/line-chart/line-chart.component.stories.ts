@@ -49,7 +49,7 @@ export const Primary: Story = {
 const meta: Meta<LineChartComponent> = {
     component: LineChartComponent,
     decorators: [
-        componentWrapperDecorator((story) => `<div style="width:90%; height:80%">${story}</div>`)
+        componentWrapperDecorator((story) => `<div>${story}</div>`)
     ],
 };
 

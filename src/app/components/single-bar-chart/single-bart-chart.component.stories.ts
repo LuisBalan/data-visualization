@@ -23,7 +23,7 @@ export const Primary: Story = {
 const meta: Meta<SingleBarChartComponent> = {
     component: SingleBarChartComponent,
     decorators: [
-        componentWrapperDecorator((story) => `<div style="width: 40%; height: 40%">${story}</div>`),
+        componentWrapperDecorator((story) => `<div>${story}</div>`),
     ],
 };
 

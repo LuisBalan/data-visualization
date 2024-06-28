@@ -28,7 +28,7 @@ export const Primary: StoryObj<PieChartComponent> = {
 const meta: Meta<PieChartComponent> = {
     component: PieChartComponent,
     decorators: [
-        componentWrapperDecorator((story) => `<div style="width: 40%; height: 40%">${story}</div>`),
+        componentWrapperDecorator((story) => `<div>${story}</div>`),
     ],
 };
 

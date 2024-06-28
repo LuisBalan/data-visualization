@@ -56,7 +56,10 @@ export class ComboComponent implements OnInit {
                 labels: {
                     color: textColor
                 }
-            }
+            },
+            colorschemes: {
+                scheme: 'brewer.SetOne9'
+              }
         },
         scales: {
             x: {
