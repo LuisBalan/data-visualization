@@ -12,8 +12,12 @@ import { DataService } from '../../services/data.service';
 export class SingleBarChartComponent implements OnInit {
   basicData: any;
   basicOptions: any;
+//   _dataService: DataService;
 
-  constructor( private dataService: DataService) {}
+//   constructor( private dataService: DataService ) {
+//     this._dataService = dataService;
+
+//   }
 
   ngOnInit() {
     const documentStyle = getComputedStyle(document.documentElement);

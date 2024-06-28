@@ -4,11 +4,11 @@ import { componentWrapperDecorator, type Meta, type StoryObj } from "@storybook/
 export const Primary: StoryObj<PieChartComponent> = {
     args: {
         data: {
-            labels: [],
+            labels: ['Ventas', 'Renta', 'Estacionamiento', 'Radio'],
             pluggins: [],
             datasets: [
                 {
-                    data: [],
+                    data: [40, 32, 7, 21],
                       backgroundColor: [
                     "#42A5F5",
                     "#66BB6A",
