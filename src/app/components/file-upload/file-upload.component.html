@@ -1,1 +1,22 @@
-<p>file-upload works!</p>
+<div class="card flex justify-content-center">
+    <p-toast />
+    <p-fileUpload
+        name="demo[]"
+        (onUpload)="onUpload($event)"
+        [multiple]="false"
+        accept=".csv"
+        [maxFileSize]="1000000"
+    >
+        <ng-template>
+            @if (uploadedFiles.length) {
+                <ul>
+                    @for(file of uploadedFiles; track file){
+                        <li>
+                            {{file.name}} - {{file.size}} bytes
+                        </li>
+                    }
+                </ul>
+            }
+        </ng-template>
+    </p-fileUpload>
+</div>
