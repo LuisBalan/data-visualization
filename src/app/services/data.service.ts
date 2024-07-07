@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams, HttpInterceptor } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from '../../environment/environment';
+// import * as donoughtContent from "../../assets/mocked-data/doughnut"
 @Injectable({
   providedIn: 'root'
 })
@@ -9,6 +10,7 @@ export class DataService {
 
   // 'https://coco-rojo-marino.azurewebsites.net/api/data_request?code=holalola'
   private baseURL = 'https://coco-rojo-marino.azurewebsites.net/api'
+  private doughnutJsonUrl = "/assets/mocked-data/doughnut.json";
   
   constructor( private http: HttpClient) { }
 
@@ -34,6 +36,11 @@ export class DataService {
     const params = new HttpParams().set('code', code);
     return this.http.get<any>(url);
   }
+
+  getDataToRender() {
+     console.log('----<z', this.doughnutJsonUrl)
+    return this.http.get<any>(this.doughnutJsonUrl)
+  };
 
 
 }
