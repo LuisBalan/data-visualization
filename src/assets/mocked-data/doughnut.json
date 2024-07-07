@@ -1,22 +1,42 @@
 [
     {
     "categoria": "Estacionamiento",
-    "valor": "15"
+    "valor": "1"
     },
     {
         "categoria": "Inmuebles",
-        "valor": "30"
+        "valor": "3"
     },
     {
         "categoria": "Marketing",
-        "valor": "20"
+        "valor": "2"
     },
     {
         "categoria": "Radio",
-        "valor": "10"
+        "valor": "5"
     },
     {
         "categoria": "Ventas",
-        "valor": "15"
-    }
+        "valor": "9"
+    },
+    {
+        "categoria": "Energía",
+        "valor": "1"
+        },
+        {
+            "categoria": "Mantenimiento",
+            "valor": "20"
+        },
+        {
+            "categoria": "Sueldos",
+            "valor": "20"
+        },
+        {
+            "categoria": "Finiquitos",
+            "valor": "10"
+        },
+        {
+            "categoria": "Deuda",
+            "valor": "20"
+        }
 ]
