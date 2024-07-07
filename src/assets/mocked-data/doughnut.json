@@ -1,0 +1,22 @@
+[
+    {
+    "categoria": "Estacionamiento",
+    "valor": "15"
+    },
+    {
+        "categoria": "Inmuebles",
+        "valor": "30"
+    },
+    {
+        "categoria": "Marketing",
+        "valor": "20"
+    },
+    {
+        "categoria": "Radio",
+        "valor": "10"
+    },
+    {
+        "categoria": "Ventas",
+        "valor": "15"
+    }
+]
