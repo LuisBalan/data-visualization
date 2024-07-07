@@ -1,6 +1,7 @@
 import { DoughnutChartComponent } from "./doughnut-chart.component";
 import { componentWrapperDecorator, type Meta, type StoryObj } from "@storybook/angular/"
 import { plugins } from 'chart.js';
+import { ChartService } from '../../services/chart.service';
 
 
 type Story = StoryObj<DoughnutChartComponent>;

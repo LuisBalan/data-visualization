@@ -2,10 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ChartModule } from 'primeng/chart';
 import { DataService } from '../../services/data.service';
 import { ChartService } from '../../services/chart.service';
-// import 'chartjs-plugin-colorschemes';
-// import 'chartjs-plugin-colorschemes/src/plugins/plugin.colorschemes';
-// import { Aspect6 } from 'chartjs-plugin-colorschemes/src/colorschemes/colorschemes.office';
-
 
 @Component({
   selector: 'app-doughnut-chart',
@@ -48,22 +44,6 @@ export class DoughnutChartComponent implements OnInit {
         datasets: [
             {
                 data: this._data,
-                // backgroundColor: [
-                //   // documentStyle.getPropertyValue('--blue-500'),
-                //   // documentStyle.getPropertyValue('--yellow-500'),
-                //   // documentStyle.getPropertyValue('--green-500')
-                //   "#FF6384",
-                //   "#36A2EB",
-                //   "#FFCE56"
-                // ],
-                // hoverBackgroundColor: [
-                //   // documentStyle.getPropertyValue('--blue-400'),
-                //   // documentStyle.getPropertyValue('--yellow-400'),
-                //   // documentStyle.getPropertyValue('--green-400')
-                //   "#FF6384",
-                //   "#36A2EB",
-                //   "#FFCE56"
-                // ]
             }
         ],
         options: {
