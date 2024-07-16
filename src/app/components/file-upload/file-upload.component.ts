@@ -20,11 +20,11 @@ interface UploadEvent {
 export class FileUploadComponent {
   @ViewChild('uploadedFile') uploadedFile!: any;
   @ViewChild('csvUploader') csvUploader!: any;
-  fileContent!: any;
-  tableTitles: string[] = [];
- 
+  fileContent: any = '';
+  tableTitles: any = [];
+
   uploadedFiles: any[] = [];
-  
+
   constructor(private messageService: MessageService){};
 
 
@@ -37,7 +37,7 @@ export class FileUploadComponent {
       console.log('file reader: ', fileReader.readAsText(this.fileContent))
       let arrayResult = fileReader.result?.toString().split('\n');
       console.log('--- array result ---', arrayResult)
-  
+
     };
     // for(let file of event.files){
     //   this.uploadedFiles.push(file);
@@ -48,22 +48,22 @@ export class FileUploadComponent {
     //   detail: ''
     // });
   };
-  
+
   seeContent(event: any) {
     let fileReader = new FileReader();
-    console.log('event: file', event.file)
-    console.log('file: ', this.uploadedFile)
-    console.log('csv uploader: ', this.csvUploader)
-    console.log('---', this.csvUploader.event)
-    console.log('--->', event.target.files[0]);
     this.fileContent = event.target.files[0];
+
     fileReader.onload = () => {
-      console.log(fileReader.result)
-      let csvRows = (fileReader.result as string).split('\n');
-      // this.tableTitles = csvRows[0];
+      this.fileContent = fileReader.result;
+      console.log('file reader result: ', this.fileContent);
+      console.log('type of file reader result: ', typeof this.fileContent)
+      let csvRows = (this.fileContent as string).split('\r\n');
+      this.tableTitles = csvRows[0].split(',');
+      console.log('csv rows: ', csvRows)
       console.log('header: ', this.tableTitles)
 
     };
+
     console.log('read as a text: ', fileReader.readAsText(this.fileContent))
   };
 

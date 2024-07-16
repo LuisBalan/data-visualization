@@ -30,7 +30,13 @@
      (onSelect)="onUpload($event)"/>
     > -->
     <label for="uploaderFile">Choose a CSV file</label>
-    <input #csvUploader type="file" name="uploaderFile" accept=".csv" (change)="seeContent($event)">
+    <input
+        #csvUploader
+        type="file"
+        name="uploaderFile"
+        accept=".csv"
+        (change)="seeContent($event)"
+    >
 </div>
 <div>
     <!-- @for(title of csvHeader; track title) {
@@ -38,4 +44,3 @@
     } -->
 
 </div>
-<button (onClick)="showContent()">See content</button>
