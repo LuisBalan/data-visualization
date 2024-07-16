@@ -1,11 +1,12 @@
 <div class="card flex justify-content-center">
-    <p-toast />
+    <!-- <p-toast />
     <p-fileUpload
         name="demo[]"
         (onUpload)="onUpload($event)"
         [multiple]="false"
         accept=".csv"
         [maxFileSize]="1000000"
+        #fileUploaded
     >
         <ng-template>
             @if (uploadedFiles.length) {
@@ -18,5 +19,23 @@
                 </ul>
             }
         </ng-template>
-    </p-fileUpload>
+    </p-fileUpload> -->
+    <!-- <p-toast />
+    <p-fileUpload
+    mode="basic" 
+    chooseLabel="Choose" 
+    chooseIcon="pi pi-upload"
+    name="demo[]" 
+    accept=".csv" 
+     (onSelect)="onUpload($event)"/>
+    > -->
+    <label for="uploaderFile">Choose a CSV file</label>
+    <input #csvUploader type="file" name="uploaderFile" accept=".csv" (change)="seeContent($event)">
 </div>
+<div>
+    <!-- @for(title of csvHeader; track title) {
+        <span>{{title}}</span>
+    } -->
+
+</div>
+<button (onClick)="showContent()">See content</button>
