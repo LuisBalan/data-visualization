@@ -38,9 +38,13 @@
         (change)="seeContent($event)"
     >
 </div>
-<div>
-    <!-- @for(title of csvHeader; track title) {
-        <span>{{title}}</span>
-    } -->
-
+<div class="csv-controls flex flex-row flex-wrap">
+    <div class="columns-selector flex flex-column">
+        @for(category of columnCategories; track category){
+            <p-checkbox
+            [label]="category.name"
+            />
+        }
+    </div>
+    <div class="csv-preview flex flex-column"></div>
 </div>

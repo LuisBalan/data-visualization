@@ -1,0 +1,14 @@
+.csv-controls {
+    border: 1px solid blue;
+    height: 32rem;
+    justify-content: space-between;
+    .columns-selector {
+        border: 1px solid black;
+        width: 10%;
+    }
+
+    .csv-preview {
+        border: 1px solid red;
+        width: 50%
+    }
+}
