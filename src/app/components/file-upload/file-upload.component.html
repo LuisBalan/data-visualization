@@ -1,34 +1,4 @@
 <div class="flex justify-content-center">
-    <!-- <p-toast />
-    <p-fileUpload
-        name="demo[]"
-        (onUpload)="onUpload($event)"
-        [multiple]="false"
-        accept=".csv"
-        [maxFileSize]="1000000"
-        #fileUploaded
-    >
-        <ng-template>
-            @if (uploadedFiles.length) {
-                <ul>
-                    @for(file of uploadedFiles; track file){
-                        <li>
-                            {{file.name}} - {{file.size}} bytes
-                        </li>
-                    }
-                </ul>
-            }
-        </ng-template>
-    </p-fileUpload> -->
-    <!-- <p-toast />
-    <p-fileUpload
-    mode="basic" 
-    chooseLabel="Choose" 
-    chooseIcon="pi pi-upload"
-    name="demo[]" 
-    accept=".csv" 
-     (onSelect)="onUpload($event)"/>
-    > -->
     <div class="uploader-container">
         <label class="uploader-label" for="uploaderFile">Choose a CSV file</label>
         <input
@@ -40,15 +10,15 @@
         >
     </div>
     <div class="csv-controls grid nested-grid">
+        <div class="csv-preview">
+            <app-table></app-table>
+        </div>
         <div class="col-fixed columns-selector" style="max-width: 15%">
             @for(category of columnCategories; track category){
                 <p-checkbox
                 [label]="category.name"
                 />
             }
-        </div>
-        <div class="csv-preview">
-            <app-table></app-table>
         </div>
     </div>
 </div>

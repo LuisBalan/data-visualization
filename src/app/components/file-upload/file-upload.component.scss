@@ -10,18 +10,29 @@
 
 .csv-controls {
     border: 1px solid blue;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    flex: auto;
+    flex-wrap: nowrap;
+    height: 520px;
 
     .columns-selector {
         border: 1px solid black;
-        min-width: 10%;
-        height: 32rem;
+        height: auto;
+        width: 25%;
         display: flex;
         flex-direction: column;
         overflow-x: auto;
+        position: relative;
     }
 
     .csv-preview {
         border: 1px solid red;
+        overflow-x: scroll;
+        width: 85%;
+        height: 100%;
+        position: relative;
     }
 }
 
