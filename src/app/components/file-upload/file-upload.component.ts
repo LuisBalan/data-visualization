@@ -4,6 +4,7 @@ import { FileUploadModule } from 'primeng/fileupload';
 import { ToastModule } from 'primeng/toast';
 import { CommonModule } from '@angular/common';
 import { CheckboxModule } from 'primeng/checkbox';
+import { TableComponent } from '../table/table.component';
 
 interface UploadEvent {
   originalEvent: Event;
@@ -18,7 +19,7 @@ interface TableCategory {
 @Component({
   selector: 'app-file-upload',
   standalone: true,
-  imports: [ FileUploadModule, ToastModule, CommonModule, CheckboxModule],
+  imports: [ FileUploadModule, ToastModule, CommonModule, CheckboxModule, TableComponent],
   templateUrl: './file-upload.component.html',
   styleUrl: './file-upload.component.scss',
   providers: [MessageService]

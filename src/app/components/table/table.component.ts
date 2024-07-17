@@ -50,9 +50,4 @@ export class TableComponent {
         rating: 4
     }];
   };
-
-
-
-
-
 }
