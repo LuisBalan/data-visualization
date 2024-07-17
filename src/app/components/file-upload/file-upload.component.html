@@ -1,4 +1,4 @@
-<div class="card flex justify-content-center">
+<div class="flex justify-content-center">
     <!-- <p-toast />
     <p-fileUpload
         name="demo[]"
@@ -29,22 +29,23 @@
     accept=".csv" 
      (onSelect)="onUpload($event)"/>
     > -->
-    <label for="uploaderFile">Choose a CSV file</label>
-    <input
-        #csvUploader
-        type="file"
-        name="uploaderFile"
-        accept=".csv"
-        (change)="seeContent($event)"
-    >
-</div>
-<div class="csv-controls flex flex-row flex-wrap">
-    <div class="columns-selector flex flex-column">
-        @for(category of columnCategories; track category){
-            <p-checkbox
-            [label]="category.name"
-            />
-        }
+    <div class="uploader-container">
+        <label class="uploader-label" for="uploaderFile">Choose a CSV file</label>
+        <input
+            #csvUploader
+            type="file"
+            name="uploaderFile"
+            accept=".csv"
+            (change)="seeContent($event)"
+        >
     </div>
-    <div class="csv-preview flex flex-column"></div>
+    <div class="csv-controls grid nested-grid">
+        <div class="col-fixed columns-selector" style="max-width: 15%">
+            @for(category of columnCategories; track category){
+                <p-checkbox
+                [label]="category.name"
+                />
+            }
+        </div>
+    </div>
 </div>

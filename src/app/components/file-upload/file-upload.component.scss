@@ -1,14 +1,44 @@
+.uploader-container {
+    padding: 0.5rem;
+    border: 1px solid gray;
+    margin-bottom: 0.25rem;
+
+    .uploader-label {
+        margin-right: 1.5rem;
+    }
+}
+
 .csv-controls {
     border: 1px solid blue;
-    height: 32rem;
-    justify-content: space-between;
+
     .columns-selector {
         border: 1px solid black;
-        width: 10%;
+        min-width: 10%;
+        height: 32rem;
+        display: flex;
+        flex-direction: column;
+        overflow-x: auto;
     }
 
     .csv-preview {
         border: 1px solid red;
-        width: 50%
     }
+}
+
+p-checkbox {
+    label {
+        .p-checkbox-label {
+            font-size: 50px;
+        }
+    }
+}
+
+// .p-checkbox-label {
+//     margin-left: 0.5rem;
+//     font-size: 30rem !important;
+// }
+
+.p-checkbox-box {
+    width: 40px !important;
+    height: 40px !important;    
 }
