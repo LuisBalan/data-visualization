@@ -1,0 +1,62 @@
+[
+    {
+        "MES": "2023-01-01T00:00:00.000",
+        "TIPO": "TRASPASO",
+        "METODO": "TRANSFERENCIA",
+        "MONTO": 66000.0
+    },
+    {
+        "MES": "2023-01-01T00:00:00.000",
+        "TIPO": "TRASPASO",
+        "METODO": "TRANSFERENCIA",
+        "MONTO": 29103.0
+    },
+    {
+        "MES": "2023-01-01T00:00:00.000",
+        "TIPO": "TRASPASO",
+        "METODO": "TRANSFERENCIA",
+        "MONTO": 26000.0
+    },
+    {
+        "MES": "2023-01-01T00:00:00.000",
+        "TIPO": "TRASPASO",
+        "METODO": "TRANSFERENCIA",
+        "MONTO": 55103.0
+    },
+    {
+        "MES": "2023-01-01T00:00:00.000",
+        "TIPO": "TRASPASO",
+        "METODO": "TRANSFERENCIA",
+        "MONTO": 30800.0
+    },
+    {
+        "MES": "2023-01-01T00:00:00.000",
+        "TIPO": "TRASPASO",
+        "METODO": "TRANSFERENCIA",
+        "MONTO": 30800.0
+    },
+    {
+        "MES": "2023-01-01T00:00:00.000",
+        "TIPO": "TRASPASO",
+        "METODO": "TRANSFERENCIA",
+        "MONTO": 170000.0
+    },
+    {
+        "MES": "2023-01-01T00:00:00.000",
+        "TIPO": "TRASPASO",
+        "METODO": "TRANSFERENCIA",
+        "MONTO": 55103.0
+    },
+    {
+        "MES": "2023-01-01T00:00:00.000",
+        "TIPO": "TRASPASO",
+        "METODO": "TRANSFERENCIA",
+        "MONTO": 26000.0
+    },
+    {
+        "MES": "2023-01-01T00:00:00.000",
+        "TIPO": "TRASPASO",
+        "METODO": "TRANSFERENCIA",
+        "MONTO": 41300.0
+    }
+]

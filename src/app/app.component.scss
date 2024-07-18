@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+p-toolbar {
+    height: 50px;
+}
+
+.navbar-style {
+    background-color: aqua;
+    border: 1px solid aqua;
+}
+
+
+.visual {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    padding-top: 0.5rem;
+    .dashboard {
+        width: 100vw;
+        height: auto;
+    }
+    // .toolbar {
+    //     width: 20vw;
+    //     display: inline-block;
+    //     height: 100%;
+    // }
+}

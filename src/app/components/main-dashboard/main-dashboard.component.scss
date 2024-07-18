@@ -1,16 +1,15 @@
 .main-dashboard { 
     flex-direction: row;
     justify-content:start;
-    max-height: 50%;
+    height: 80%;
     
     .charts-area {
-        max-width: 80%;
+        max-width: auto;
         display: flex;
         flex-direction: column;
-        max-height: 30%;
+        max-height: 75vh;
         flex-wrap:wrap;
-        border: 1px solid red;
-        overflow-y: auto;
+        // overflow-y: auto;
         position: relative;
         padding: 2rem;
         .bars-pie {
@@ -20,9 +19,8 @@
         }
     }
 
-    .controls-area {
-        width: auto;
-        border: 1px solid green;
-        background-color: red;
+    .charts-container {
+        grid-template-rows: auto;
+
     }
 }

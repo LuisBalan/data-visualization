@@ -1,0 +1,70 @@
+{
+    "GASTO": [
+        {
+            "MES": 1672531200000,
+            "FECHA": 1675123200000,
+            "EMPRESA": "CORPORATIVO",
+            "MONTO": 111.84
+        },
+        {
+            "MES": 1682899200000,
+            "FECHA": 1685318400000,
+            "EMPRESA": "CORPORATIVO",
+            "MONTO": 22071.0
+        },
+        {
+            "MES": 1682899200000,
+            "FECHA": 1683849600000,
+            "EMPRESA": "RADIODIFUSORA",
+            "MONTO": 11916.66
+        },
+        {
+            "MES": 1682899200000,
+            "FECHA": 1685059200000,
+            "EMPRESA": "RADIODIFUSORA",
+            "MONTO": 2179.35
+        },
+        {
+            "MES": 1688169600000,
+            "FECHA": 1689552000000,
+            "EMPRESA": "CORPORATIVO",
+            "MONTO": 8094.66
+        },
+        {
+            "MES": 1690848000000,
+            "FECHA": 1692748800000,
+            "EMPRESA": "RADIODIFUSORA",
+            "MONTO": 9771.8
+        }
+    ],
+    "INGRESO": [
+        {
+            "MES": 1672531200000,
+            "FECHA": 1672876800000,
+            "EMPRESA": "INMOBILIARIA",
+            "MONTO": 14204.66
+        },
+        {
+            "MES": 1672531200000,
+            "FECHA": 1673481600000,
+            "EMPRESA": "INMOBILIARIA",
+            "MONTO": 1139.23
+        }
+    ],
+    "PRESTAMO ENTRE EMPRESAS": [
+        {
+            "MES": 1688169600000,
+            "FECHA": 1689811200000,
+            "EMPRESA": null,
+            "MONTO": 789.0
+        }
+    ],
+    "TRASPASO": [
+        {
+            "MES": 1672531200000,
+            "FECHA": 1673481600000,
+            "EMPRESA": null,
+            "MONTO": 55103.0
+        }
+    ]
+}
