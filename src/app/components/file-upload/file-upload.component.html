@@ -1,0 +1,24 @@
+<div class="flex justify-content-center">
+    <div class="uploader-container">
+        <label class="uploader-label" for="uploaderFile">Choose a CSV file</label>
+        <input
+            #csvUploader
+            type="file"
+            name="uploaderFile"
+            accept=".csv"
+            (change)="seeContent($event)"
+        >
+    </div>
+    <div class="csv-controls grid nested-grid">
+        <div class="csv-preview">
+            <app-table></app-table>
+        </div>
+        <div class="col-fixed columns-selector" style="max-width: 15%">
+            @for(category of columnCategories; track category){
+                <p-checkbox
+                [label]="category.name"
+                />
+            }
+        </div>
+    </div>
+</div>

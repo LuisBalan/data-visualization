@@ -3,6 +3,9 @@ body {
     padding: 0;
 }
 
+p-toolbar {
+    height: 50px;
+}
 
 .navbar-style {
     background-color: aqua;
@@ -16,12 +19,12 @@ body {
     height: auto;
     padding-top: 0.5rem;
     .dashboard {
-        width: 80vw;
-        padding-right: 0.5rem;
+        width: 100vw;
+        height: auto;
     }
-    .toolbar {
-        width: 20vw;
-        display: inline-block;
-        height: 100%;
-    }
+    // .toolbar {
+    //     width: 20vw;
+    //     display: inline-block;
+    //     height: 100%;
+    // }
 }
