@@ -1,0 +1,10 @@
+<div class="flex flex-column">
+    @for(option of options; track option){
+        <p-checkbox
+        [(ngModel)]="selectedOptions"
+        [label]="option.name"
+        [value]="option.value"
+        name="columns-categories"
+        />
+    }
+</div>
