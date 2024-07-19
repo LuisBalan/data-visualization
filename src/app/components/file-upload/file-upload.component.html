@@ -6,7 +6,7 @@
             type="file"
             name="uploaderFile"
             accept=".csv"
-            (change)="loadFile($event)"
+            (change)="onLoadFile($event)"
         >
     </div>
     <div class="csv-controls grid nested-grid">
@@ -15,7 +15,7 @@
         </div>
         <div class="col-fixed columns-selector" style="max-width: 15%">
             <app-checkboxes-list
-                [options]="columnCategories"
+                [options]="csvHeaderLabels"
             >
             </app-checkboxes-list>
         </div>
