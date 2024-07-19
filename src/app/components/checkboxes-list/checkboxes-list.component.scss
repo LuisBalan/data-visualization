@@ -1,7 +1,16 @@
 .checkbox-list {
-    background-color: gray;
+    // background-color: gray;
+    background-color: #F8F9FA;
     min-width: 12rem;
+    padding-left: 0.5rem;
+    height: auto;
+
     p-checkbox {
         display: block;
+        padding: 0.1rem 0;
+
+        .p-checkbox-label {
+            margin-left: 0.1rem !important;
+        }
     }
 }

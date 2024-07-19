@@ -17,14 +17,13 @@ export class CheckboxesListComponent {
   constructor() {}
 
   ngOnInit() {
-    this.options = [
-      { name: 'Accounting', key: 'A', value: 'accounting' },
-        { name: 'Marketing', key: 'M', value: 'marketing' },
-        { name: 'Production', key: 'P', value: 'production' },
-        { name: 'Research', key: 'R', value: 'research' }
-    ];
-
-
+    // this.options = [
+    //   { name: 'Accounting', key: 'A', value: 'accounting' },
+    //     { name: 'Marketing', key: 'M', value: 'marketing' },
+    //     { name: 'Production', key: 'P', value: 'production' },
+    //     { name: 'Research', key: 'R', value: 'research' }
+    // ];
+    console.log('checkboxes list workin!')
   };
 
   ngOnChanges(){
