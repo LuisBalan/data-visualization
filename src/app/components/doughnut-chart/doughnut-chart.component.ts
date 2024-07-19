@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 import { ChartModule } from 'primeng/chart';
 import { DataService } from '../../services/data.service';
 import { ChartService } from '../../services/chart.service';
@@ -11,7 +11,7 @@ import { ChartService } from '../../services/chart.service';
   styleUrl: './doughnut-chart.component.scss'
 })
 export class DoughnutChartComponent implements OnInit {
-  data: any;
+  @Input() data: any;
   options: any;
   res!: any;
   _labels!: any;
@@ -28,11 +28,11 @@ export class DoughnutChartComponent implements OnInit {
       console.log('_data ', this._data)
 
       // JSON.parse(res);
-      this.res = res;
-      this._labels = res.map((record: any) => record.categoria);
-      this._data = res.map((record: any) => Number(record.valor));
+      this.data = res;
+      this._labels = this.data.map((record: any) => record.categoria);
+      this._data = this.data.map((record: any) => Number(record.valor));
 
-      console.log('-- res in on init ---', this.res)
+      console.log('-- res in on init ---', this.data)
       console.log('--- _labels in on init ---', this._labels)
       console.log('--- _data in on init --- ', this._data)
   
@@ -70,11 +70,11 @@ export class DoughnutChartComponent implements OnInit {
     });
   }
 
-  getDataToRender() {
-    this.dataService.getDataToRender().subscribe(data => {
-      this._labels = data.map((record: any) => record.categoria);
-      this._data = data.map((record: any) => record.valor);
-    });
-  };
+  // getDataToRender() {
+  //   this.dataService.getDataToRender().subscribe(data => {
+  //     this._labels = data.map((record: any) => record.categoria);
+  //     this._data = data.map((record: any) => record.valor);
+  //   });
+  // };
 
 };

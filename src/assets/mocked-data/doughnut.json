@@ -22,21 +22,21 @@
     {
         "categoria": "Energía",
         "valor": "1"
-        },
-        {
+    },
+    {
             "categoria": "Mantenimiento",
             "valor": "20"
-        },
-        {
+    },
+    {
             "categoria": "Sueldos",
             "valor": "20"
-        },
-        {
-            "categoria": "Finiquitos",
-            "valor": "10"
-        },
-        {
-            "categoria": "Deuda",
-            "valor": "20"
-        }
+    },
+    {
+        "categoria": "Finiquitos",
+        "valor": "10"
+    },
+    {
+        "categoria": "Deuda",
+        "valor": "20"
+    }
 ]
