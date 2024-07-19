@@ -6,7 +6,7 @@
             type="file"
             name="uploaderFile"
             accept=".csv"
-            (change)="seeContent($event)"
+            (change)="loadFile($event)"
         >
     </div>
     <div class="csv-controls grid nested-grid">
@@ -14,11 +14,10 @@
             <app-table></app-table>
         </div>
         <div class="col-fixed columns-selector" style="max-width: 15%">
-            @for(category of columnCategories; track category){
-                <p-checkbox
-                [label]="category.name"
-                />
-            }
+            <app-checkboxes-list
+                [options]="columnCategories"
+            >
+            </app-checkboxes-list>
         </div>
     </div>
 </div>

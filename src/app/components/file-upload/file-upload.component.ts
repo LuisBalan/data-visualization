@@ -5,6 +5,8 @@ import { ToastModule } from 'primeng/toast';
 import { CommonModule } from '@angular/common';
 import { CheckboxModule } from 'primeng/checkbox';
 import { TableComponent } from '../table/table.component';
+import { CheckboxesListComponent } from '../checkboxes-list/checkboxes-list.component';
+import { Observable } from 'rxjs';
 
 interface UploadEvent {
   originalEvent: Event;
@@ -13,13 +15,20 @@ interface UploadEvent {
 
 interface TableCategory {
   name: string,
-  label: string
+  label: string,
+  value: string,
 }
 
 @Component({
   selector: 'app-file-upload',
   standalone: true,
-  imports: [ FileUploadModule, ToastModule, CommonModule, CheckboxModule, TableComponent],
+  imports: [ FileUploadModule,
+    ToastModule,
+    CommonModule,
+    CheckboxModule,
+    TableComponent,
+    CheckboxesListComponent
+  ],
   templateUrl: './file-upload.component.html',
   styleUrl: './file-upload.component.scss',
   providers: [MessageService]
@@ -29,14 +38,17 @@ export class FileUploadComponent {
   @ViewChild('csvUploader') csvUploader!: any;
   fileContent: any = '';
   tableTitles: any = [];
-  columnCategories: Array<TableCategory> = [];
+  columnCategories: Array<TableCategory> = []; // array containing the names of the columns
 
   uploadedFiles: any[] = [];
+  uploadFileObservable$!: Observable<TableCategory[]>;
 
   constructor(private messageService: MessageService){};
 
+  // this.uploadFileObservable = new Observable((observer) => {})
 
-  onUpload(event: any){
+
+  onUpload(event: any): any{
     console.log('--- even target file --- ', event.currentFiles[0])
     this.fileContent = event.currentFiles[0];
     let fileReader = new FileReader();
@@ -47,17 +59,10 @@ export class FileUploadComponent {
       console.log('--- array result ---', arrayResult)
 
     };
-    // for(let file of event.files){
-    //   this.uploadedFiles.push(file);
-    // };
-    // this.messageService.add({
-    //   severity: 'info',
-    //   summary: 'File Uploaded',
-    //   detail: ''
-    // });
+
   };
 
-  seeContent(event: any) {
+  loadFile(event: any) {
     let fileReader = new FileReader();
     this.fileContent = event.target.files[0];
 
@@ -83,9 +88,10 @@ export class FileUploadComponent {
 
   createColumnCategories(arg: any): any {
     (arg as Array<any>).forEach((title: string) => {
-      let category: TableCategory = {name: '', label: ''};
+      let category: TableCategory = {name: '', label: '', value: ''};
       category.name = title;
       category.label = title;
+      category.value = title;
       this.columnCategories.push(category);
     });
   };

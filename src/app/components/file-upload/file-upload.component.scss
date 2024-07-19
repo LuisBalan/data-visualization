@@ -1,6 +1,7 @@
 .uploader-container {
     padding: 0.5rem;
-    border: 1px solid gray;
+    background-color: #F8F9FA;
+    border: 0.3px solid #e3dbdb;
     margin-bottom: 0.25rem;
 
     .uploader-label {
@@ -9,7 +10,6 @@
 }
 
 .csv-controls {
-    border: 1px solid blue;
     justify-content: space-between;
     display: flex;
     flex-direction: row;
@@ -18,17 +18,19 @@
     height: 520px;
 
     .columns-selector {
-        border: 1px solid black;
+        // border: 1px solid black;
+        background-color: #F8F9FA;
         height: auto;
         width: 25%;
         display: flex;
         flex-direction: column;
         overflow-x: auto;
         position: relative;
+        align-items: stretch;
     }
 
     .csv-preview {
-        border: 1px solid red;
+        border: 0.3px solid #e3dbdb;
         overflow-x: scroll;
         width: 85%;
         height: 100%;
