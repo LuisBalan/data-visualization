@@ -4,7 +4,7 @@
             <tr>
                 @for(col of cols; track col){
                     <th>
-                        {{col.header}}
+                        {{col.name}}
                     </th>
                 }
             </tr>
@@ -13,7 +13,7 @@
             <tr>
                 @for(col of cols; track col){
                     <td>
-                        {{rowData[col.field]}}
+                        {{rowData[col.label]}}
                     </td>
                 }
             </tr>
