@@ -7,11 +7,32 @@ import { CheckboxOption } from "../components/file-upload/file-upload.component"
 })
 export class FileService{
     private fileContentSource = new BehaviorSubject<CheckboxOption[]>([]);
-    currentFileContent = this.fileContentSource.asObservable();
+    private rowsFromCurrentFile = new BehaviorSubject<any[]>([]);
+    currentTableHeaders = this.fileContentSource.asObservable();
 
     getColumnsNamesFromTable(content: any){
-        let csvRows = (content as string).split('\r\n');
-        let columnsNamesRow: string[] = csvRows[0].split(',');
+        let rowsAsObjects = [];
+        let csvRowsAsStrings = (content as string).split('\r\n');
+        console.log('- csv rows - ', csvRowsAsStrings);
+        let columnsNamesRow: string[] = csvRowsAsStrings[0].split(',');
+        console.log('- columns names row -- ', columnsNamesRow)
+
+        let tableBodyRows = csvRowsAsStrings.slice(1);
+        console.log('-- table body rows --', tableBodyRows);
+
+        const rowsAsArray = tableBodyRows.map((row: string) => row.split(','));
+        console.log('-- rows as array --', rowsAsArray);
+
+        for (let i = 0; i < rowsAsArray.length ; i++ ) {
+            let newObj: any = {};
+            let targetRow = rowsAsArray[i].reduce((accum: any, current: any, index: any) => {
+                newObj[`${columnsNamesRow[index]}`] = current;
+            }, newObj);
+            rowsAsObjects.push(targetRow);
+        };
+
+        console.log('--- rows as objects --- ', rowsAsObjects);
+
         const headers: CheckboxOption[] = this.createColumnCategories(columnsNamesRow)
         this.fileContentSource.next(headers);
     };
@@ -27,4 +48,9 @@ export class FileService{
         });
         return categoriesArray;
       };
+
+      convertCSVToArrayOfStrings(content: any) {
+        return (content as string).split('\r\n');
+      };
+
 }
