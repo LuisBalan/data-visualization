@@ -31,7 +31,7 @@ export class TableComponent {
   //     { field: 'quantity', header: 'Quantity' }
   // ];
 
-  this.fileService.currentFileContent.subscribe(value => {
+  this.fileService.currentTableHeaders.subscribe(value => {
     this.cols = value;
   });
 

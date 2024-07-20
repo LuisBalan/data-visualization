@@ -35,7 +35,7 @@ export class FileUploadComponent {
   constructor( private fileService: FileService ){};
 
   ngOnInit(){
-    this.fileService.currentFileContent.subscribe(value => {
+    this.fileService.currentTableHeaders.subscribe(value => {
       this.csvHeaderLabels = value;
     });
   }
