@@ -31,12 +31,19 @@ export interface CheckboxOption {
 export class FileUploadComponent {
 
   csvHeaderLabels: any;
+  csvTableHeaders!: any;
+  csvTableRows!: any;
+  
 
-  constructor( private fileService: FileService ){};
+  constructor( private fileService: FileService ){ };
 
   ngOnInit(){
     this.fileService.currentTableHeaders.subscribe(value => {
       this.csvHeaderLabels = value;
+    });
+
+    this.fileService.currentTableRows.subscribe(value => {
+      this.csvTableRows = value;
     });
   }
 
@@ -46,7 +53,7 @@ export class FileUploadComponent {
     if (fileContent) {
       fileReader.onload = () => {
       const resultantContent = fileReader.result;
-      this.fileService.getColumnsNamesFromTable(resultantContent);
+      this.fileService.getColumnsAndRowsFromTable(resultantContent);
       };
       fileReader.readAsText(fileContent);
     }

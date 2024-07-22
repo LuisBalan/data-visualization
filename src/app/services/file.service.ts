@@ -9,32 +9,23 @@ export class FileService{
     private fileContentSource = new BehaviorSubject<CheckboxOption[]>([]);
     private rowsFromCurrentFile = new BehaviorSubject<any[]>([]);
     currentTableHeaders = this.fileContentSource.asObservable();
+    currentTableRows = this.rowsFromCurrentFile.asObservable();
 
-    getColumnsNamesFromTable(content: any){
-        let rowsAsObjects = [];
+    ngOnInit(){ };
+
+    getColumnsAndRowsFromTable(content: any){
         let csvRowsAsStrings = (content as string).split('\r\n');
-        console.log('- csv rows - ', csvRowsAsStrings);
         let columnsNamesRow: string[] = csvRowsAsStrings[0].split(',');
-        console.log('- columns names row -- ', columnsNamesRow)
-
-        let tableBodyRows = csvRowsAsStrings.slice(1);
-        console.log('-- table body rows --', tableBodyRows);
-
-        const rowsAsArray = tableBodyRows.map((row: string) => row.split(','));
-        console.log('-- rows as array --', rowsAsArray);
-
-        for (let i = 0; i < rowsAsArray.length ; i++ ) {
-            let newObj: any = {};
-            let targetRow = rowsAsArray[i].reduce((accum: any, current: any, index: any) => {
-                newObj[`${columnsNamesRow[index]}`] = current;
-            }, newObj);
-            rowsAsObjects.push(targetRow);
-        };
-
-        console.log('--- rows as objects --- ', rowsAsObjects);
-
         const headers: CheckboxOption[] = this.createColumnCategories(columnsNamesRow)
+
+        const rowsTableCollection = csvRowsAsStrings.slice(1)
+        .map((row: string) => row.split(','))
+        .map((row: any) => {
+          return this.createObjectsWithTableContent(columnsNamesRow, row)
+        });
+
         this.fileContentSource.next(headers);
+        this.rowsFromCurrentFile.next(rowsTableCollection);
     };
 
     createColumnCategories(arg: string[]): CheckboxOption[] {
@@ -52,5 +43,15 @@ export class FileService{
       convertCSVToArrayOfStrings(content: any) {
         return (content as string).split('\r\n');
       };
+
+      createObjectsWithTableContent(columnsNames: any, valuesArray: any){
+        let rowObject: any= {};
+        for (let i = 0; i < columnsNames.length; i++) {
+          let keyName = columnsNames[i];
+          rowObject[keyName] = valuesArray[i];
+        };
+        return rowObject;
+      };
+
 
 }

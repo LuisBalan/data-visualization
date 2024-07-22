@@ -11,7 +11,11 @@
     </div>
     <div class="csv-controls grid nested-grid">
         <div class="csv-preview">
-            <app-table></app-table>
+            <app-table
+                [cols]="csvHeaderLabels"
+                [rows]="csvTableRows"
+            >
+            </app-table>
         </div>
         <div class="col-fixed columns-selector" style="max-width: 15%">
             <app-checkboxes-list
