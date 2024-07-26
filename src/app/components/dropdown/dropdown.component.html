@@ -1,1 +1,19 @@
-<p>dropdown works!</p>
+<p-checkbox 
+[formControl]="this.columnForm.controls['reactiveCheckbox']"
+[(ngModel)]="checked" 
+[binary]="true"
+[label]="checkBoxOption.label"
+inputId="binary" />
+<form action="" [formControl]="this.columnForm.controls['reactiveDropDown']" class="selectForm" id="selectForm">
+    <select name="optionsSelect" id="select" (change)="selectChange($event)" class="select"
+    [disabled]="!this.columnForm.controls['reactiveCheckbox'].value"
+    >   <option value="" disabled selected>Seleccione un tipo de dato</option>
+        <ng-container *ngFor="let option of options; let i = index">
+            <option [value]="options[i].label" [ngValue]="options[0].label">{{options[i].label}}</option>
+        </ng-container>
+    </select>
+</form>
+
+<!-- <pre>{{ selectControl.value| json}}</pre>
+<pre>{{this.reactiveCheckbox.value}}</pre> -->
+<pre>{{ this.columnForm.value | json}}</pre>
