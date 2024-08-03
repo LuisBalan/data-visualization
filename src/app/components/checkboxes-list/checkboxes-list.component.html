@@ -1,10 +1,48 @@
 <div class="flex flex-column checkbox-list">
-    @for(option of options; track option){
+    @for(option of options; track option; let i = $index){
         <p-checkbox
         [(ngModel)]="selectedOptions"
         [label]="option.name"
-        [value]="option.value"
+        [value]="option"
+        [id]="i"
         name="columns-categories"
         />
     }
+    <!-- <pre>{{ selectedOptions | json }}</pre> -->
 </div>
+<!-- <pre>{{checkBoxesForm.controls['checkBoxes'].value | json}}</pre>
+<pre>{{ options | json }}</pre> -->
+
+
+<!-- <div>
+    <div class="card flex justify-content-center">
+        <p-checkbox 
+            [(ngModel)]="checked" 
+            [binary]="true" 
+            inputId="binary" />
+    </div>
+</div> -->
+<!-- <form [formGroup]="checkBoxesForm">
+    <div class="card flex justify-content-center" formArrayName="checkBoxes"
+    *ngFor="let option of options; let i = index"
+    >
+    <p-checkbox 
+        [formControlName]="i"
+        [binary]="true"
+        inputId="binary" 
+        [label]="option.name"
+        [value]="option"
+        (onChange)="selectCheckbox($event)"
+        /> -->
+
+        <!-- @for( option of options; track option ) {
+            <p-checkbox 
+            [formControlName]="i"
+                [binary]="true"
+                inputId="binary" 
+                [label]="option.name"
+                [value]="option !== null"
+                />
+        } -->
+    <!-- </div>
+</form> -->
